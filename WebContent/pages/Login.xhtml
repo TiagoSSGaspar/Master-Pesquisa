@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html  >
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Login</title>
+	<h:outputStylesheet library="sistemaOb" name="styles/login.css" />
+	<h:outputScript target="body" library="sistemaOb" name="javascripts/login.js" />
+
+
+</h:head>
+
+<h:body>
+
+	<p:growl />
+
+	<h:form id="form-login">
+		<h:graphicImage class="wave" library="sistemaOb" name="images/wave.png"/>
+		<div class="container">
+			<div class="img">
+				
+			</div>
+			<div class="login-content">
+				<div id="conteiner-login" >					
+					<h2 class="title">Bem vindo!</h2>
+					<div class="input-div one">
+						<div class="i">
+							<i class="fas fa-user"></i>
+						</div>
+						<div class="div">
+							<h5>E-mail</h5>
+							<h:inputText class="input" />
+						</div>
+					</div>
+					<div class="input-div pass">
+						<div class="i">
+							<i class="fas fa-lock"></i>
+						</div>
+						<div class="div">
+							<h5>Senha</h5>
+							<h:inputSecret class="input"/>
+						</div>
+					</div>
+					<a href="#">Recuperar Senha?</a> 
+					<h:commandButton class="btn" value="Entrar"/>
+				</div>
+			</div>
+		</div>
+		
+	</h:form>
+
+</h:body>
+
+</html>
+
