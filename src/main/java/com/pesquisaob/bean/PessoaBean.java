@@ -2,6 +2,7 @@ package com.pesquisaob.bean;
 
 import java.io.Serializable;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -12,28 +13,24 @@ import com.pesquisaob.model.PessoaFisica;
 import lombok.Getter;
 import lombok.Setter;
 
-@javax.faces.view.ViewScoped
+@RequestScoped
 @Named(value = "pessoaBean")
 public class PessoaBean extends CrudBean<Pessoa, PessoaDAO> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-
+	@Inject
 	private PessoaDAO pessoaDAO;
 	
-	@Getter
-	@Setter
+	@Inject
 	private PessoaFisica pessoaFisica;
 	
-	/*
-	@Getter
-	@Setter
-	@Inject
-	@Named(value = "pf")
-	private PessoaFisica pessoaFisica;
-	*/
-	// @Inject
-	// private Pessoa user;
+
+	//private PessoaFisica pessoaFisica;
+
+
+	//private Pessoa user;
+	
 	@Getter
 	@Setter
 	private boolean pj;
@@ -42,11 +39,9 @@ public class PessoaBean extends CrudBean<Pessoa, PessoaDAO> implements Serializa
 	public PessoaDAO getDAO() {
 
 		return pessoaDAO;
-
 	}
 
 	@Override
-	@Inject
 	public Pessoa criarNovaEntidade() {		
 
 		return pessoaFisica;

@@ -2,6 +2,7 @@ package com.pesquisaob.model;
 
 import java.io.Serializable;
 
+import javax.enterprise.context.RequestScoped;
 import javax.persistence.Entity;
 
 import lombok.AllArgsConstructor;
@@ -14,6 +15,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@RequestScoped
 public class PessoaFisica extends Pessoa implements Serializable{
 	
 

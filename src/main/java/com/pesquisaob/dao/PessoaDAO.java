@@ -2,19 +2,16 @@ package com.pesquisaob.dao;
 
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.inject.Named;
+import javax.enterprise.context.RequestScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
 import com.pesquisaob.model.Pessoa;
 
-
-
-@Named
+@RequestScoped
 public class PessoaDAO implements CrudIDAO<Pessoa> {
 
-	@Inject
+	
 	private EntityManager manager;
 	
 	public void salvar(Pessoa pessoa) {
